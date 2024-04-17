@@ -20,6 +20,6 @@ public class Player : MonoBehaviour
     {
         var h = Input.GetAxis("Horizontal");
         rb.velocity = transform.TransformDirection(new Vector3(h, 0, 0) * (speed * Time.fixedDeltaTime) +
-                                                   new Vector3(0, 0, 0));
+                                                   new Vector3(0, rb.velocity.y, 0));
     }
 }
